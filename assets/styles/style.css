@@ -1,0 +1,45 @@
+
+.banner {
+    background-image: url("../img/Baner.gif");
+    padding: 5% 20% 55% 2%;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+.banner::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.fuente{
+    background-image: url(../img/fondo.jpg);
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'The Nautigal', cursive;
+    color: black;
+}
+
+.inferior{
+    height: 0 auto;
+    flex-flow: row wrap;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    
+}
+
+.redes img{
+    width: 80px;
+    border-radius: 80%;
+    margin: 20px;padding-top: 5px;
+}
