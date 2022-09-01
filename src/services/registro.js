@@ -1,7 +1,4 @@
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
+import {getAuth,  createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
 
 let botonRegistro = document.getElementById("botonRegistro");
 
@@ -11,6 +8,8 @@ botonRegistro.addEventListener("click", function (evento) {
   let email = document.getElementById("correo").value;
   let password = document.getElementById("password").value;
 
+  let formulario = document.getElementById("formulario");
+
   console.log(email, password);
 
   const auth = getAuth();
@@ -19,12 +18,23 @@ botonRegistro.addEventListener("click", function (evento) {
       // Signed in
       const user = userCredential.user;
       // ...
-      alert("Registro exitoso")
+      Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Successful registration',
+        showConfirmButton: false,
+        timer: 2000
+      })
+      formulario.reset()   
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       // ..
-        alert("uuppss fallamos...."+errorMessage)
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: errorMessage,
+      })
     });
 });
