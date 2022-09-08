@@ -69,14 +69,32 @@ botonAgregarCarrito.addEventListener("click", function (evento) {
 /*let popularidad=document.getElementById("popularidadInfo")    
 popularidad.textContent=producto.popularidad*/
 
-//Traer el contenedor de estrellas
-let contenedorEstrellas = document.getElementById("contenedorEstrellas");
-let popularidadInfo = document.getElementById("popularidadInfo")
-for (let i = 1; i <= producto.popularidad; i++) {
-  let estrella = document.createElement("i");
+//Mostramos la popularidad real
+let popularidad = document.getElementById("popularidadInfo")
+popularidad.textContent = producto.popularidad;
+popularidad.classList.add("fw-bold","d-none")
 
-  estrella.classList.add("bi", "bi-star-fill","text-warning");
-  contenedorEstrellas.appendChild(estrella);
+//Redondeamos la popularidad para mostrar en las estrellas
+let valorProducto = Math.round(producto.popularidad)
+
+//Recorremos el valor de la popularidad y pintamos las estrellas
+for (let index = 1; index <= valorProducto; index++) {
+    if (index == 1) {
+        let estrella1 = document.getElementById('1estrella')
+        estrella1.classList.add("text-warning")
+    }else if(index == 2){
+        let estrella2 = document.getElementById('2estrella')
+        estrella2.classList.add("text-warning")
+    }else if(index == 3){
+        let estrella3 = document.getElementById('3estrella')
+        estrella3.classList.add("text-warning")
+    }else if(index == 4){
+        let estrella4 = document.getElementById('4estrella')
+        estrella4.classList.add("text-warning")
+    }else{
+        let estrella5 = document.getElementById('5estrella')
+        estrella5.classList.add("text-warning")
+    }
 }
 
 let botonAgregar = document.getElementById("botonAgregarCarrito");
