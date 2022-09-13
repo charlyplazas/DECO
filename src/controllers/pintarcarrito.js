@@ -1,6 +1,3 @@
-//Llamar al memoria
-
-
 let carrito;
 if (JSON.parse(localStorage.getItem("carrito")) != null) {
   carrito = JSON.parse(localStorage.getItem("carrito"));

@@ -92,9 +92,9 @@ if (carrito == null) {
     console.log(producto.cantidad);
     console.log(producto.precio * producto.cantidad);
 
-    let subtotalCalculado = producto.precio.split("$")[1] * producto.cantidad;
+    let subtotalCalculado = producto.precio.split("$ ")[1] * producto.cantidad;
     console.log(subtotalCalculado);
-    subtotal.textContent = "$" + subtotalCalculado;
+    subtotal.textContent = "US$ " + subtotalCalculado;
 
     //EL TOTAL (LA SUMATORIA DE LOS SUBTOTALES)
     total = total + subtotalCalculado;

@@ -112,7 +112,7 @@ productos.forEach(function (producto) {
 
   let precio = document.createElement("h2")
   precio.classList.add("text-center", "fw-bold")
-  precio.textContent = " $ " + producto.precio
+  precio.textContent = " US$ " + producto.precio
 
   /// creando popularidad
 

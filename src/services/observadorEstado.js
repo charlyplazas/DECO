@@ -1,5 +1,6 @@
 import {getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js"
 let botonSalir=document.getElementById("botonSalir")
+let usuario = document.getElementById("usuario")
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
